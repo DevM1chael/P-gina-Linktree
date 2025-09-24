@@ -1,0 +1,108 @@
+/*Estilizando corpo */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #ff0000, #030303);
+    
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/*Estilizando o topo da página*/
+#divtopo{
+    background-color: rgba(0, 0, 0, 0.514);
+    padding: 10px;
+    text-align: center;
+}
+.textotopo{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;         
+}
+/**/
+
+/* Estilizando a imagem*/
+
+img{
+    margin-top: 50px;
+    margin-bottom: 15px;
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+}
+/**/
+
+
+#nomeWelcome{
+
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: solid 1px black;
+    background-color: rgba(0, 0, 0, 0.253);
+    color: white;
+    font-size: 15px;
+
+}
+
+
+
+/*Texto descritivo do corpo*/
+#corpoDescritivo p{
+    border-radius: 25px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.253);
+    border: solid black 1px;
+
+
+
+    /*Edição do texto da div*/
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+
+/* Estilizando os links */
+#links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /*Espaço entre linhas e colunas*/
+    margin: 20px 0;
+}
+
+#links a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.514);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+
+
+
+/* Estilizando footer (pé) da página */
+footer {
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

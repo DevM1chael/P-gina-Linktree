@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página pessoal de Michael Henrique - Desenvolvedor Web">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Página pessoal de Michael Henrique - Desenvolvedor Web"
+    />
     <title>Michael Silva - Desenvolvedor</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- 
         REFATORAÇÃO: Mudei div#divtopo para <header> e <nav>
         POR QUÊ: Tags semânticas são melhores para SEO e acessibilidade
@@ -15,17 +18,17 @@
         nav representa um bloco de navegação
     -->
     <header class="header" id="header">
-        <nav class="navbar">
-            <!-- 
+      <nav class="navbar">
+        <!-- 
                 REFATORAÇÃO: Mudei href="teste" para links âncora (#)
                 POR QUÊ: Links âncora navegam dentro da própria página
                 e são mais semânticos que links placeholder
             -->
-            <a href="#inicio" class="nav-link">INÍCIO</a>
-            <a href="#sobre" class="nav-link">SOBRE</a>
-            <a href="#projetos" class="nav-link">PROJETOS</a>
-            <a href="#contato" class="nav-link">CONTATO</a>
-        </nav>
+        <a href="#inicio" class="nav-link">INÍCIO</a>
+        <a href="#sobre" class="nav-link">SOBRE</a>
+        <a href="#projetos" class="nav-link">PROJETOS</a>
+        <a href="#contato" class="nav-link">CONTATO</a>
+      </nav>
     </header>
 
     <!-- 
@@ -34,85 +37,97 @@
         e melhora a semântica e acessibilidade
     -->
     <main class="main-content" id="main">
-        <!-- 
+      <!-- 
             REFATORAÇÃO: Criei seções com IDs âncora e classes reutilizáveis
             POR QUÊ: IDs para navegação interna, classes para estilização
         -->
-        <section id="inicio" class="hero-section">
-            <!-- 
+      <section id="inicio" class="hero-section">
+        <!-- 
                 REFATORAÇÃO: Mantive a imagem mas adicionei classe
                 POR QUÊ: Classe permite estilizar consistentemente
             -->
-            <img src="/imagens/MinhaFoto.avif" alt="Foto de perfil de Michael Henrique" class="profile-image">
-            
-            <!-- 
+        <img
+          src="./assets/pngwing.com.png"
+          alt="Foto de perfil de Michael Henrique"
+          class="profile-image"
+        />
+
+        <!-- 
                 REFATORAÇÃO: Mudei div#nomeWelcome para div com classe
                 POR QUÊ: Classes são mais flexíveis que IDs para CSS
             -->
-            <div class="welcome-card">
-                <h1 class="main-title">Michael Henrique P. Silva</h1>
-                <h2 class="subtitle">Bem-vindo à minha página pessoal!</h2>
-            </div>
-        </section>
+        <div class="welcome-card">
+          <h1 class="main-title">Michael Henrique P. Silva</h1>
+          <h2 class="subtitle">Bem-vindo à minha página pessoal!</h2>
+        </div>
+      </section>
 
-        <!-- 
+      <!-- 
             REFATORAÇÃO: Criei seção separada para sobre
             POR QUÊ: Organiza melhor o conteúdo semanticamente
         -->
-        <section id="sobre" class="about-section">
-            <!-- 
+      <section id="sobre" class="about-section">
+        <!-- 
                 REFATORAÇÃO: Mudei div#corpoDescritivo para div com classe
                 POR QUÊ: Classe pode ser reutilizada em outras seções
             -->
-            <div class="text-card">
-                <p class="description-text">
-                    Meu nome é Michael Henrique, tenho 20 anos e sou um desenvolvedor web 
-                    apaixonado por tecnologia e inovação.
-                </p>
-            </div>
-        </section>
+        <div class="text-card">
+          <p class="description-text">
+            Meu nome é Michael Henrique, tenho 20 anos e sou um desenvolvedor
+            web apaixonado por tecnologia e inovação.
+          </p>
+        </div>
+      </section>
 
-        <!-- 
+      <!-- 
             REFATORAÇÃO: Adicionei seção de projetos (vazia por enquanto)
             POR QUÊ: Estrutura pronta para quando adicionar projetos
         -->
-        <section id="projetos" class="projects-section">
-            <div class="text-card">
-                <p class="description-text">Em breve meus projetos serão adicionados aqui!</p>
-            </div>
-        </section>
+      <section id="projetos" class="projects-section">
+        <div class="text-card">
+          <p class="description-text">
+            Em breve meus projetos serão adicionados aqui!
+          </p>
+        </div>
+      </section>
 
-        <!-- 
+      <!-- 
             REFATORAÇÃO: Criei seção específica para contato
             POR QUÊ: Melhor organização do conteúdo
         -->
-        <section id="contato" class="contact-section">
-            <!-- 
+      <section id="contato" class="contact-section">
+        <!-- 
                 REFATORAÇÃO: Mudei div#links para div com classe
                 POR QUÊ: Classe mais descritiva e reutilizável
             -->
-            <div class="social-links">
-                <!-- 
+        <div class="social-links">
+          <!-- 
                     REFATORAÇÃO: Mantive seus links mas com classe consistente
                     POR QUÊ: social-link pode ser estilizado uniformemente
                 -->
-                <a href="https://www.linkedin.com/in/michael-henrique-pereira-silva-4b0b98228/" 
-                   target="_blank" 
-                   class="social-link">
-                   LinkedIn
-                </a>
-                <a href="https://www.github.com/MichaelHenriquePS" 
-                   target="_blank" 
-                   class="social-link">
-                   GitHub
-                </a>
-                <a href="https://www.instagram.com/michael_henrique_20/" 
-                   target="_blank" 
-                   class="social-link">
-                   Instagram
-                </a>
-            </div>
-        </section>
+          <a
+            href="https://www.linkedin.com/in/michael-henrique-pereira-silva-4b0b98228/"
+            target="_blank"
+            class="social-link"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://www.github.com/MichaelHenriquePS"
+            target="_blank"
+            class="social-link"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.instagram.com/michael_henrique_20/"
+            target="_blank"
+            class="social-link"
+          >
+            Instagram
+          </a>
+        </div>
+      </section>
     </main>
 
     <!-- 
@@ -120,7 +135,9 @@
         POR QUÊ: Classe para estilização e texto mais semântico
     -->
     <footer class="footer" id="footer">
-        <p class="footer-text">&copy; 2025 Michael Henrique. Todos os direitos reservados.</p>
+      <p class="footer-text">
+        &copy; 2025 Michael Henrique. Todos os direitos reservados.
+      </p>
     </footer>
-</body>
+  </body>
 </html>

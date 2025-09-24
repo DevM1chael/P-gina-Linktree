@@ -1,58 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Michael Silva</title>
-  </head>
-  <body>
-    <div id="divtopo">
-      <a href="teste" class="textotopo">INÍCIO</a>
-      <a href="teste" class="textotopo">SOBRE</a>
-      <a href="teste" class="textotopo">PROJETOS</a>
-      <a href="teste" class="textotopo">CONTATO</a>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página pessoal de Michael Henrique - Desenvolvedor Web">
+    <title>Michael Silva - Desenvolvedor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+        REFATORAÇÃO: Mudei div#divtopo para <header> e <nav>
+        POR QUÊ: Tags semânticas são melhores para SEO e acessibilidade
+        header representa o cabeçalho da página
+        nav representa um bloco de navegação
+    -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <!-- 
+                REFATORAÇÃO: Mudei href="teste" para links âncora (#)
+                POR QUÊ: Links âncora navegam dentro da própria página
+                e são mais semânticos que links placeholder
+            -->
+            <a href="#inicio" class="nav-link">INÍCIO</a>
+            <a href="#sobre" class="nav-link">SOBRE</a>
+            <a href="#projetos" class="nav-link">PROJETOS</a>
+            <a href="#contato" class="nav-link">CONTATO</a>
+        </nav>
+    </header>
 
-    <div class="container">
-      <img src="./assets/pngwing.com.png" alt="" />
-      <div id="nomeWelcome">
-        <h1>Michael Henrique P. Silva</h1>
-        <h2>Bem vindo à minha página pessoal!</h2>
-      </div>
+    <!-- 
+        REFATORAÇÃO: Adicionei <main> para conteúdo principal
+        POR QUÊ: <main> indica o conteúdo principal da página
+        e melhora a semântica e acessibilidade
+    -->
+    <main class="main-content" id="main">
+        <!-- 
+            REFATORAÇÃO: Criei seções com IDs âncora e classes reutilizáveis
+            POR QUÊ: IDs para navegação interna, classes para estilização
+        -->
+        <section id="inicio" class="hero-section">
+            <!-- 
+                REFATORAÇÃO: Mantive a imagem mas adicionei classe
+                POR QUÊ: Classe permite estilizar consistentemente
+            -->
+            <img src="/imagens/MinhaFoto.avif" alt="Foto de perfil de Michael Henrique" class="profile-image">
+            
+            <!-- 
+                REFATORAÇÃO: Mudei div#nomeWelcome para div com classe
+                POR QUÊ: Classes são mais flexíveis que IDs para CSS
+            -->
+            <div class="welcome-card">
+                <h1 class="main-title">Michael Henrique P. Silva</h1>
+                <h2 class="subtitle">Bem-vindo à minha página pessoal!</h2>
+            </div>
+        </section>
 
-      <div id="corpoDescritivo" ;>
-        <p>
-          Meu nome é Michael Henrique, tenho 20 anos e sou um desenvolvedor web
-          <br />
-          apaixonado por tecnologia e inovação.
-        </p>
-      </div>
+        <!-- 
+            REFATORAÇÃO: Criei seção separada para sobre
+            POR QUÊ: Organiza melhor o conteúdo semanticamente
+        -->
+        <section id="sobre" class="about-section">
+            <!-- 
+                REFATORAÇÃO: Mudei div#corpoDescritivo para div com classe
+                POR QUÊ: Classe pode ser reutilizada em outras seções
+            -->
+            <div class="text-card">
+                <p class="description-text">
+                    Meu nome é Michael Henrique, tenho 20 anos e sou um desenvolvedor web 
+                    apaixonado por tecnologia e inovação.
+                </p>
+            </div>
+        </section>
 
-      <div id="links">
-        <a
-          href="https://www.linkedin.com/in/michael-henrique-pereira-silva-4b0b98228/"
-          target="_blank"
-          class="link"
-          >LinkedIn</a
-        >
-        <a
-          href="https://www.github.com/MichaelHenriquePS"
-          target="_blank"
-          class="link"
-          >GitHub</a
-        >
-        <a
-          href="https://www.instagram.com/michael_henrique_20/"
-          target="_blank"
-          class="link"
-          >Instagram</a
-        >
-      </div>
-    </div>
+        <!-- 
+            REFATORAÇÃO: Adicionei seção de projetos (vazia por enquanto)
+            POR QUÊ: Estrutura pronta para quando adicionar projetos
+        -->
+        <section id="projetos" class="projects-section">
+            <div class="text-card">
+                <p class="description-text">Em breve meus projetos serão adicionados aqui!</p>
+            </div>
+        </section>
 
-    <footer>
-      <a>© 2025 Todos os direitos reservados.</a>
+        <!-- 
+            REFATORAÇÃO: Criei seção específica para contato
+            POR QUÊ: Melhor organização do conteúdo
+        -->
+        <section id="contato" class="contact-section">
+            <!-- 
+                REFATORAÇÃO: Mudei div#links para div com classe
+                POR QUÊ: Classe mais descritiva e reutilizável
+            -->
+            <div class="social-links">
+                <!-- 
+                    REFATORAÇÃO: Mantive seus links mas com classe consistente
+                    POR QUÊ: social-link pode ser estilizado uniformemente
+                -->
+                <a href="https://www.linkedin.com/in/michael-henrique-pereira-silva-4b0b98228/" 
+                   target="_blank" 
+                   class="social-link">
+                   LinkedIn
+                </a>
+                <a href="https://www.github.com/MichaelHenriquePS" 
+                   target="_blank" 
+                   class="social-link">
+                   GitHub
+                </a>
+                <a href="https://www.instagram.com/michael_henrique_20/" 
+                   target="_blank" 
+                   class="social-link">
+                   Instagram
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- 
+        REFATORAÇÃO: Mantive footer mas adicionei classe e melhorei o texto
+        POR QUÊ: Classe para estilização e texto mais semântico
+    -->
+    <footer class="footer" id="footer">
+        <p class="footer-text">&copy; 2025 Michael Henrique. Todos os direitos reservados.</p>
     </footer>
-  </body>
+</body>
 </html>

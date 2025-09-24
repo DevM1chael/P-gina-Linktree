@@ -1,14 +1,47 @@
-/* Estilizando corpo */
+/* ===== VARIÁVEIS CSS ===== */
+:root {
+    --primary-red: #ff0000;
+    --primary-black: #030303;
+    --text-white: #ffffff;
+    --card-bg: rgba(0, 0, 0, 0.253);
+    --nav-bg: rgba(0, 0, 0, 0.514);
+    --transition: all 0.3s ease-in-out;
+}
+
+/* ===== ESTILOS GERAIS ===== */
 body {
     text-align: center;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #ff0000, #030303);
+    background: linear-gradient(to bottom, var(--primary-red), var(--primary-black));
 }
 
-.container {
+/* ===== HEADER E NAVEGAÇÃO ===== */
+.header {
+    background-color: var(--nav-bg);
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-link {
+    color: var(--text-white);
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    color: var(--primary-red);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.main-content {
     max-width: 800px;
     margin: auto;
     padding: 20px;
@@ -16,86 +49,66 @@ body {
     transition: backdrop-filter 0.5s ease-in-out;
 }
 
-.container:hover {
+.main-content:hover {
     backdrop-filter: blur(15px);
 }
 
-/* Estilizando o topo da página */
-#divtopo {
-    background-color: rgba(0, 0, 0, 0.514);
-    padding: 10px;
-    text-align: center;
-}
-
-.textotopo {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.textotopo:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-    color: #ff0000;
-}
-
-/* Estilizando a imagem */
-img {
+/* ===== SEÇÃO HERO (INÍCIO) ===== */
+.profile-image {
     margin-top: 50px;
     margin-bottom: 15px;
     width: 300px;
     height: 300px;
     border-radius: 200px;
-    transition: all 0.4s ease-in-out;
+    transition: var(--transition);
     border: 3px solid transparent;
 }
 
-img:hover {
+.profile-image:hover {
     transform: scale(1.05);
     border-color: rgba(255, 0, 0, 0.5);
     box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
 }
 
-#nomeWelcome {
+.welcome-card {
     margin-bottom: 10px;
     border-radius: 25px;
     border: solid 1px black;
-    background-color: rgba(0, 0, 0, 0.253);
-    color: white;
+    background-color: var(--card-bg);
+    color: var(--text-white);
     font-size: 15px;
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition);
 }
 
-#nomeWelcome:hover {
+.welcome-card:hover {
     transform: translateY(-3px);
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
 }
 
-/* Texto descritivo do corpo */
-#corpoDescritivo p {
+/* ===== CARDS REUTILIZÁVEIS ===== */
+.text-card {
     border-radius: 25px;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.253);
+    margin: 20px auto;
+    background-color: var(--card-bg);
     border: solid black 1px;
-    color: white;
+    color: var(--text-white);
     font-size: 20px;
     line-height: 1.6;
     text-align: center;
-    transition: all 0.3s ease-in-out;
+    padding: 20px;
+    transition: var(--transition);
+    max-width: 600px;
 }
 
-#corpoDescritivo:hover p {
+.text-card:hover {
     transform: translateY(-3px);
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
 }
 
-/* Estilizando os links */
-#links {
+/* ===== LINKS SOCIAIS ===== */
+.social-links {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -103,31 +116,70 @@ img:hover {
     margin: 20px 0;
 }
 
-#links a {
+.social-link {
     display: inline-block;
     padding: 15px 30px;
-    background-color: rgba(0, 0, 0, 0.514);
-    color: white;
+    background-color: var(--nav-bg);
+    color: var(--text-white);
     text-decoration: none;
     border-radius: 30px;
     font-size: 18px;
-    transition: all 0.3s ease-in-out;
+    transition: var(--transition);
     width: 200px;
 }
 
-#links a:hover {
+.social-link:hover {
     background-color: rgba(255, 0, 0, 0.7);
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
 }
 
-/* Estilizando footer */
-footer {
-    background-color: black;
-    color: white;
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--primary-black);
+    color: var(--text-white);
     text-align: center;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* ===== TIPOGRAFIA ===== */
+.main-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: normal;
+    opacity: 0.9;
+}
+
+.description-text {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 10px;
+    }
+    
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .nav-link {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .social-link {
+        width: 90%;
+        max-width: 250px;
+    }
 }

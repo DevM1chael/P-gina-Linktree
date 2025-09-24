@@ -1,4 +1,4 @@
-/*Estilizando corpo */
+/* Estilizando corpo */
 body {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -6,7 +6,6 @@ body {
     padding: 0;
     min-height: 100vh;
     background: linear-gradient(to bottom, #ff0000, #030303);
-    
 }
 
 .container {
@@ -14,70 +13,93 @@ body {
     margin: auto;
     padding: 20px;
     backdrop-filter: blur(10px);
+    transition: backdrop-filter 0.5s ease-in-out;
 }
 
-/*Estilizando o topo da página*/
-#divtopo{
+.container:hover {
+    backdrop-filter: blur(15px);
+}
+
+/* Estilizando o topo da página */
+#divtopo {
     background-color: rgba(0, 0, 0, 0.514);
     padding: 10px;
     text-align: center;
 }
-.textotopo{
+
+.textotopo {
     color: white;
     text-decoration: none;
-    margin: 0 15px;         
+    margin: 0 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
 }
-/**/
 
-/* Estilizando a imagem*/
+.textotopo:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    color: #ff0000;
+}
 
-img{
+/* Estilizando a imagem */
+img {
     margin-top: 50px;
     margin-bottom: 15px;
     width: 300px;
     height: 300px;
     border-radius: 200px;
+    transition: all 0.4s ease-in-out;
+    border: 3px solid transparent;
 }
-/**/
 
+img:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+}
 
-#nomeWelcome{
-
+#nomeWelcome {
     margin-bottom: 10px;
     border-radius: 25px;
     border: solid 1px black;
     background-color: rgba(0, 0, 0, 0.253);
     color: white;
     font-size: 15px;
-
+    transition: all 0.3s ease-in-out;
 }
 
+#nomeWelcome:hover {
+    transform: translateY(-3px);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+}
 
-
-/*Texto descritivo do corpo*/
-#corpoDescritivo p{
+/* Texto descritivo do corpo */
+#corpoDescritivo p {
     border-radius: 25px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.253);
     border: solid black 1px;
-
-
-
-    /*Edição do texto da div*/
     color: white;
     font-size: 20px;
     line-height: 1.6;
     text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
-
+#corpoDescritivo:hover p {
+    transform: translateY(-3px);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+}
 
 /* Estilizando os links */
 #links {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: center; /*Espaço entre linhas e colunas*/
+    align-items: center;
     margin: 20px 0;
 }
 
@@ -89,16 +111,19 @@ img{
     text-decoration: none;
     border-radius: 30px;
     font-size: 18px;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: all 0.3s ease-in-out;
+    width: 200px;
 }
 
+#links a:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+}
 
-
-
-
-/* Estilizando footer (pé) da página */
+/* Estilizando footer */
 footer {
-    background-color:black;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 10px 0;
